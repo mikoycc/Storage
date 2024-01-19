@@ -5,6 +5,7 @@
 脚本兼容: QuantumultX, Surge4, Loon, JsBox, Node.js
 电报频道: @NobyDa
 问题反馈: @NobyDa_bot
+For:https://github.com/NobyDa/Script/blob/master/iQIYI-DailyBonus/iQIYI.js
 
 获取Cookie说明：
 Safari浏览器打开 https://m.iqiyi.com/user.html 使用密码登录, 如通知成功获取cookie则可使用该脚本.
