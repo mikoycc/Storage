@@ -1,5 +1,5 @@
 #!name=Notability
-#!desc= Notability一次性解锁
+#!desc= Notability Unlock 
 
 [Script]
 Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mikoycc/surge/main/module/Notability/Notability.js
