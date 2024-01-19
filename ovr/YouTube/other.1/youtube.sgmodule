@@ -17,7 +17,7 @@
 # @Choler & @DivineEngine & @app2smile
 
 [Script]
-youtube = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\?,requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://raw.githubusercontent.com/mikoycc/surge/main/module/youtube/youtube.js
+youtube = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\?,requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://raw.githubusercontent.com/mikoycc/Storage/main/ovr/YouTube/other.1/youtube.js
 
 [Map Local]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/mikoycc/surge/main/module/youtube/blank.txt" header="Content-Type: application/vnd.yt-ump"
