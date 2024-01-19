@@ -1,0 +1,8 @@
+#!name=PhotoshopExpress
+#!desc=解锁PhotoshopExpress
+
+[MITM]
+hostname = %APPEND% lcs-mobile-cops.adobe.io
+
+[Script]
+PhotoshopExpress=type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,script-path=https://raw.githubusercontent.com/mikoycc/surge/main/module/PhotoShopExpress/PhotoShopExpress.js
