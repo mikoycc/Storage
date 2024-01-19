@@ -11,7 +11,7 @@
 (?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
 
 [Script]
-TikTok去水印 = type=http-response,pattern=https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mikoycc/surge/main/module/Tiktok/TikTok.js,script-update-interval=0
+TikTok去水印 = type=http-response,pattern=https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mikoycc/Storage/main/ovr/TikTok/other.1/TikTok.js,script-update-interval=0
 
 [MITM]
 hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com
