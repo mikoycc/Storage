@@ -1,4 +1,4 @@
-// For:https://github.com/chavyleung/scripts/blob/master/meituan/meituan.js
+//For: https://github.com/chavyleung/scripts/blob/master/meituan/meituan.js
 
 const cookieName = '美团'
 const tokenurlKey = 'chavy_tokenurl_meituan'
