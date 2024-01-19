@@ -8,7 +8,7 @@
 #!https://github.com/DualSubs/Spotify/blob/main/modules/DualSubs.Spotify.sgmodule
 
 [Script]
-DualSubs.Spotify.Tracks.response.json = type=http-response, pattern=^https?:\/\/api\.spotify\.com\/v1\/tracks\?, requires-body=1, script-path=https://raw.githubusercontent.com/mikoycc/surge/main/module/SpotifyLyric/DualSubs.Spotify.response.js
+DualSubs.Spotify.Tracks.response.json = type=http-response, pattern=^https?:\/\/api\.spotify\.com\/v1\/tracks\?, requires-body=1, script-path=https://raw.githubusercontent.com/mikoycc/Storage/main/ovr/SpotifyLyric/other.2/DualSubs.Spotify.response.js
 
 DualSubs.Spotify.Lyrics.request.json = type=http-request, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json, requires-body=1, script-path=https://raw.githubusercontent.com/mikoycc/surge/main/module/SpotifyLyric/DualSubs.Spotify.request.js
 DualSubs.Spotify.Lyrics.request.proto = type=http-request, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*), requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/mikoycc/surge/main/module/SpotifyLyric/DualSubs.Spotify.request.js
