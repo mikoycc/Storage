@@ -1,5 +1,6 @@
 #!name=解锁 AbeamTV
 #!desc=解锁 AbeamTV 应用播放限制
+# https://github.com/ConnersHua/RuleGo/blob/master/Surge/Module/Unlock/AbeamTV.sgmodule
 
 [URL Rewrite]
 # AbeamTV - api.*.abema-tv.com
