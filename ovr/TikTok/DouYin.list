@@ -1,8 +1,6 @@
 #DouYin
-
 #抖音无法观看，在hostname中加入：  -*snssdk.com, -*amemv.com
 
-#抖音IP代理
 HOST-SUFFIX,amemv.com,DouYin
 HOST-SUFFIX,ixigua.com,DouYin
 HOST-SUFFIX,ixiguavideo.com,DouYin
