@@ -1,3 +1,5 @@
+#For:https://github.com/litieyin/AD_VIP/blob/main/Script/lightroom.js
+
 body = $response.body.replace(/while.{7}\n/， "");
 let obj = JSON.parse(body);
 obj.entitlement.status="subscriber";
