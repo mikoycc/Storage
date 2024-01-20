@@ -1,6 +1,6 @@
 #!name=BoxJs
 #!desc=http://boxjs.com
-#For: https://github.com/chavyleung/scripts/blob/master/box/rewrite/boxjs.rewrite.surge.sgmodule
+#!For: https://github.com/chavyleung/scripts/blob/master/box/rewrite/boxjs.rewrite.surge.sgmodule
 
 [General]
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
