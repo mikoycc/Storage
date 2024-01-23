@@ -21,8 +21,6 @@
 (?<=&carrier=)[%A-Z0-9]+(?=&) docomo 307
 (?<=tz_name=)Asia/Shanghai(?=&) Asia/Tokyo 307
 (?<=tz_offset=)28800(?=&) 32400 307
-
-#去水印
 (?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
 
 [Script]
