@@ -1,6 +1,6 @@
 /*
 腾讯视频签到脚本
-
+For:https://github.com/ClydeTime/Quantumult/blob/main/Script/Task/videoqq.js
 更新时间: 2022-12-26
 脚本兼容: QuantumultX, Surge, Loon
 脚本作者: MayoBlueSky
