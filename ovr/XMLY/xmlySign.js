@@ -1,6 +1,6 @@
 /*
 喜马拉雅签到脚本
-
+For:https://github.com/ClydeTime/Quantumult/blob/main/Script/Task/xmlySign.js
 更新时间: 2023-11-03
 脚本兼容: Surge
 脚本作者: MartinsKing
