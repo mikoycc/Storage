@@ -1,20 +1,18 @@
 #!name=TikTok
 #!desc=解锁 TikTok 地区限制
-#!arguments=policy:PROXY,region:JP,mcc_mnc:44001,carrier:docomo,tz_name:Asia/Tokyo,tz_offset:32400
 
-#!arguments-desc=
 #!policy: TikTok 的规则策略组
-#!region: 解锁 TikTok 地区的地区码，如 region:JP
-#!mcc_mnc: 解锁 TikTok 地区的运营商代码，如 mcc_mnc:44001
-#!carrier: 解锁 TikTok地区的运营商名称，如carrier:docomo
-#!tz_name: 解锁 TikTok 地区的时区，如tz_name:Asia/Tokyo
-#!tz_offset: 解锁 TikTok 地区的时区偏移，如tz_offset:32400
+#!region: 解锁 TikTok 地区的地区码
+#!mcc_mnc: 解锁 TikTok 地区的运营商代码
+#!carrier: 解锁 TikTok地区的运营商名称
+#!tz_name: 解锁 TikTok 地区的时区
+#!tz_offset: 解锁 TikTok 地区的时区偏移
 
 #!推荐配置
-日本：region:JP  mcc_mnc:44001  carrier:docomo  tz_name:Asia/Tokyo  tz_offset:32400  
-韩国：region:KR  mcc_mnc:45005  carrier:SKT  tz_name:Asia/Seoul  tz_offset:32400  
-台湾：region:TW  mcc_mnc:46692  carrier:CHT  tz_name:Asia/Taipei  tz_offset:28800  
-美国：region:US  mcc_mnc:310260  carrier:T-Mobile  tz_name:America/New_York  tz_offset:-18000
+#!日本：region:JP  mcc_mnc:44001  carrier:docomo  tz_name:Asia/Tokyo  tz_offset:32400  
+#!韩国：region:KR  mcc_mnc:45005  carrier:SKT  tz_name:Asia/Seoul  tz_offset:32400  
+#!台湾：region:TW  mcc_mnc:46692  carrier:CHT  tz_name:Asia/Taipei  tz_offset:28800  
+#!美国：region:US  mcc_mnc:310260  carrier:T-Mobile  tz_name:America/New_York  tz_offset:-18000
 
 [Rule]
 DOMAIN,lf16-effectcdn.byteeffecttos-g.com,{{{policy}}}
