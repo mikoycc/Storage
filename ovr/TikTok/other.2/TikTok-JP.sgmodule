@@ -8,7 +8,6 @@
 #!tz_name: 解锁 TikTok 地区的时区
 #!tz_offset: 解锁 TikTok 地区的时区偏移
 
-#!推荐配置
 #!日本：region:JP  mcc_mnc:44001  carrier:docomo  tz_name:Asia/Tokyo  tz_offset:32400  
 #!韩国：region:KR  mcc_mnc:45005  carrier:SKT  tz_name:Asia/Seoul  tz_offset:32400  
 #!台湾：region:TW  mcc_mnc:46692  carrier:CHT  tz_name:Asia/Taipei  tz_offset:28800  
