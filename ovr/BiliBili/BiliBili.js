@@ -1,6 +1,6 @@
 /*
 哔哩哔哩每日任务
-
+For:https://github.com/ClydeTime/Quantumult/blob/main/Script/Task/BiliBili.js
 更新时间: 2024-01-16
 脚本兼容: QuantumultX, Surge, Loon
 脚本作者: MartinsKing（@ClydeTime）
