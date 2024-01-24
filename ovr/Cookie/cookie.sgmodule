@@ -2,7 +2,8 @@
 #!desc=定时签到脚本Cookie获取
 
 [Script]
-阿里云盘cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/mikoycc/Storage/main/ovr/ALiYunPan/aliYunPanCheckIn.js
+#阿里云盘cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/mikoycc/Storage/main/ovr/ALiYunPan/aliYunPanCheckIn.js
+aliyun = type=http-request, pattern=^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token, script-path=https://raw.githubusercontent.com/mikoycc/Storage/main/ovr/ALiYunPan/aliyun.js, requires-body=true, max-size=-1, timeout=60
 
 快看漫画获取Cookie = type=http-request,pattern=^https:\/\/api\.kkmh\.com\/v\d\/passport\/user,script-path=https://raw.githubusercontent.com/mikoycc/Storage/main/ovr/KuaiKan/Kuaikan.js
 
