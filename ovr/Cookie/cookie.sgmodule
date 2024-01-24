@@ -13,4 +13,4 @@ aliyun = type=http-request, pattern=^https:\/\/(auth|aliyundrive)\.alipan\.com\/
 
 
 [MITM]
-hostname = %APPEND% auth.alipan.com, api.kkmh.com, passport.iqiyi.com, i.meituan.com
+hostname = %APPEND% auth.alipan.com, auth.aliyundrive.com, api.kkmh.com, passport.iqiyi.com, i.meituan.com
