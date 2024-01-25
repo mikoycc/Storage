@@ -12,6 +12,7 @@
 #!韩国：region:KR  mcc_mnc:45005  carrier:SKT  tz_name:Asia/Seoul  tz_offset:32400  
 #!台湾：region:TW  mcc_mnc:46692  carrier:CHT  tz_name:Asia/Taipei  tz_offset:28800  
 #!美国：region:US  mcc_mnc:310260  carrier:T-Mobile  tz_name:America/New_York  tz_offset:-18000
+#!新加坡：region:SG  mcc_mnc:52503  carrier:M1  tz_name:Asia/Singapore  tz_offset:28800
 
 [URL Rewrite]
 (?<=_region=)CN(?=&) TW 307
