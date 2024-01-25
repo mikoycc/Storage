@@ -1,5 +1,5 @@
 #!name=TikTok
-#!desc=解锁 日本 地区限制
+#!desc=解锁 新加坡 地区限制
 
 #!policy: TikTok 的规则策略组
 #!region: 解锁 TikTok 地区的地区码
@@ -12,15 +12,16 @@
 #!韩国：region:KR  mcc_mnc:45005  carrier:SKT  tz_name:Asia/Seoul  tz_offset:32400  
 #!台湾：region:TW  mcc_mnc:46692  carrier:CHT  tz_name:Asia/Taipei  tz_offset:28800  
 #!美国：region:US  mcc_mnc:310260  carrier:T-Mobile  tz_name:America/New_York  tz_offset:-18000
+#!新加坡：region:SG  mcc_mnc:52503  carrier:M1  tz_name:Asia/Singapore  tz_offset:28800
 
 [URL Rewrite]
-(?<=_region=)CN(?=&) JP 307
-(?<=carrier_region1=)CN(?=&) JP 307
-(?<=&mcc_mnc=)460[0-1][0-9](?=&) 44001 307
+(?<=_region=)CN(?=&) SG 307
+(?<=carrier_region1=)CN(?=&) SG 307
+(?<=&mcc_mnc=)460[0-1][0-9](?=&) 52503 307
 ^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
-(?<=&carrier=)[%A-Z0-9]+(?=&) docomo 307
-(?<=tz_name=)Asia/Shanghai(?=&) Asia/Tokyo 307
-(?<=tz_offset=)28800(?=&) 32400 307
+(?<=&carrier=)[%A-Z0-9]+(?=&) M1 307
+(?<=tz_name=)Asia/Shanghai(?=&) Asia/Singapore 307
+(?<=tz_offset=)28800(?=&) 28800 307
 
 #去水印
 (?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
