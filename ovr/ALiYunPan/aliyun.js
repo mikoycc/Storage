@@ -4,14 +4,9 @@
 脚本作者：@Sliverkiss
 更新日期：2024-01-24 13:13:56
 
-2024.01.24
-- 优化时空间任务逻辑，运行一次可完成任务，需要间隔一小时以上再运行一次领取所有奖励，建议每天定时2到3次
-- 时空间可通过抹除数据、卸载重装等在不退出的登录的情况下再次登录的方式，刷满5台设备，设备建议打开备份，并将备份时间调至一百年后
-- 修复多账号运行脚本会覆盖数据，只剩一个账号的问题
-- 优化ck格式，不再兼容zqzess，而是采用自己的格式
-- 优化多账号逻辑，现在可以通过重写获取ck，不再要求手动填写ck
-- 使用脚本之前，需要更新脚本，删除之前的重写并重新拉取，更新boxjs订阅
-- 备份奖励需每天打开一次云盘刷新才能领取奖励，待考虑新的解决方案
+2024.01.29 
+- 修复好运瓶死循环bug
+- 移除垃圾回收机制 beta(如更新时发现领取时空间失败，请及时反馈)
 
 ------------------------------------------
 脚本兼容：Surge、QuantumultX、Loon、Shadowrocket、Node.js
@@ -86,7 +81,7 @@ async function main() {
             //签到
             let { signInCount } = await user.signCheckin();
             //垃圾回收
-            await user.FullGC();
+            //await user.FullGC();
             //补签卡任务
             await user.finishCardTask();
             //刷新数据
@@ -102,7 +97,8 @@ async function main() {
             //领取签到/备份奖励
             await user.getAllReward(signInCount);
             //刷新垃圾回收区
-            await user.flashCacheGC();
+            await user.removeFiles($.uploadFileList);
+            //await user.flashCacheGC();
         } else {
             //将ck过期消息存入消息数组
             $.notifyMsg.push(`❌账号${user.ADrivreInfo.name} >> Check ck error!`)
@@ -726,9 +722,10 @@ class UserInfo {
     //执行好运瓶任务
     async bottleTask() {
         $.log(`⏰ 开始执行好运瓶任务\n`);
+        let index = 1;
         do {
             await this.bottleFish();
-        } while (this.bottleStatus);
+        } while (this.bottleStatus && index++ <= 5);
     }
     //领取好运瓶
     async bottleFish() {
@@ -752,6 +749,7 @@ class UserInfo {
             }
         } catch (e) {
             $.log(`❌领取好运瓶失败！原因为:${e}`)
+            this.bottleStatus = false;
         }
     }
     //完成补签卡任务
@@ -901,11 +899,11 @@ async function getCookie() {
                 if (userCookie[index]) {
                     userCookie[index].refresh_token = refresh_token;
                     $.setjson(userCookie, ckName);
-                    $.msg($.name, `🎉${nick_name}更新token成功!`,"", { 'media-url': avatar });
+                    $.msg($.name, `🎉${nick_name}更新token成功!`, "", { 'media-url': avatar });
                 } else {
                     userCookie.push({ "name": nick_name, "refresh_token": refresh_token, "device_id": device_id });
                     $.setjson(userCookie, ckName);
-                    $.msg($.name, `🎉${nick_name}获取token成功!`,``, { 'media-url': avatar });
+                    $.msg($.name, `🎉${nick_name}获取token成功!`, ``, { 'media-url': avatar });
                 }
             }
         } catch (e) {
